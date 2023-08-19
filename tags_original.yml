@@ -1,0 +1,17 @@
+---
+- name: Ensure Apache is deployed
+  hosts: prod
+  become: yes
+  tasks:
+  - name: alpha tag task
+    ansible.builtin.copy:
+      content: "Hello"
+      dest: /var/www/html/index.html
+      
+  - name: beta tag task
+    ansible.builtin.copy:
+      content: "By By"
+      dest: /var/www/html/index.html
+
+      
+   
